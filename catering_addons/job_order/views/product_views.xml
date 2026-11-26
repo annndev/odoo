@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_job" model="ir.ui.view">
+        <field name="name">product.template.form.job</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_general']" position="inside">
+                <field name="job_cost_group"/>
+                <field name="yield_factor" invisible="type != 'consu'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

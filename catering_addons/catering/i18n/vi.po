@@ -1,0 +1,458 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* catering
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 16:41+0000\n"
+"PO-Revision-Date: 2026-11-26 16:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid ""
+"% of the quoted price,\n"
+"                    outside the 12-18% target."
+msgstr ""
+"% giá báo,\n"
+"                    ngoài mục tiêu 12-18%."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid ""
+"% of the quoted price,\n"
+"                    outside the 28-35% target."
+msgstr ""
+"% giá báo,\n"
+"                    ngoài mục tiêu 28-35%."
+
+#. module: catering
+#: model_terms:ir.actions.act_window,help:catering.action_catering_menus
+msgid ""
+"A dish recipe lists its ingredients as net quantity per portion (for example 150 g of fish fillet).\n"
+"                A set menu lists its dishes per guest. Yields on raw materials turn net into purchase quantities."
+msgstr ""
+"Công thức món liệt kê nguyên liệu theo khối lượng tịnh mỗi suất (vd: 150 g cá phi lê).\n"
+"                Set menu liệt kê các món cho mỗi khách. Tỷ lệ thu hồi của nguyên liệu quy đổi ra khối lượng cần mua."
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__pax_actual
+msgid "Actual Pax"
+msgstr "Số khách thực tế"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__allergy_notes
+#: model:ir.model.fields,field_description:catering.field_job_order__allergy_notes
+msgid "Allergies & Dietary Needs"
+msgstr "Dị ứng & chế độ ăn"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.crm_lead_view_form_catering
+msgid "Allergies, vegetarian or halal guests..."
+msgstr "Dị ứng, khách ăn chay hoặc halal..."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_form_view_catering
+msgid "BEEF"
+msgstr "BEEF"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__box_meal
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__box_meal
+msgid "Box meal"
+msgstr "Suất ăn hộp"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__budget_per_pax
+#: model:ir.model.fields,field_description:catering.field_job_order__budget_per_pax
+msgid "Budget per Pax"
+msgstr "Ngân sách/khách"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__buffet
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__buffet
+msgid "Buffet"
+msgstr "Buffet"
+
+#. module: catering
+#: model:ir.ui.menu,name:catering.menu_catering_root
+#: model_terms:ir.ui.view,arch_db:catering.product_template_form_view_catering
+msgid "Catering"
+msgstr "Tiệc"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.crm_lead_view_form_catering
+msgid "Catering Event"
+msgstr "Sự kiện tiệc"
+
+#. module: catering
+#: model:ir.actions.act_window,name:catering.action_catering_events
+msgid "Catering Events"
+msgstr "Sự kiện tiệc"
+
+#. module: catering
+#: model:ir.actions.act_window,name:catering.action_catering_products
+#: model:ir.ui.menu,name:catering.menu_catering_items
+msgid "Catering Items"
+msgstr "Danh mục tiệc"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_product_product__catering_type
+#: model:ir.model.fields,field_description:catering.field_product_template__catering_type
+#: model_terms:ir.ui.view,arch_db:catering.product_template_search_view_catering
+msgid "Catering Type"
+msgstr "Phân loại"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__cocktail
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__cocktail
+msgid "Cocktail"
+msgstr "Cocktail"
+
+#. module: catering
+#: model_terms:ir.actions.act_window,help:catering.action_catering_menus
+msgid "Create a recipe"
+msgstr "Tạo công thức"
+
+#. module: catering
+#: model_terms:ir.actions.act_window,help:catering.action_catering_events
+msgid "Create your first catering event"
+msgstr "Tạo sự kiện tiệc đầu tiên"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__dish
+msgid "DISH - Finished dish"
+msgstr "DISH - Món ăn thành phẩm"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_search_view_catering
+msgid "Dishes"
+msgstr "Món ăn"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__eq
+msgid "EQ - Equipment & tableware"
+msgstr "EQ - Dụng cụ & thiết bị tiệc"
+
+#. module: catering
+#. odoo-python
+#: code:addons/catering/models/job_order.py:0
+msgid "Enter the actual number of guests served before accepting %s."
+msgstr "Hãy nhập số khách thực tế trước khi nghiệm thu %s."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_search_view_catering
+msgid "Equipment"
+msgstr "Dụng cụ"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__pax_estimated
+#: model:ir.model.fields,field_description:catering.field_job_order__pax_estimated
+msgid "Estimated Pax"
+msgstr "Số khách dự kiến"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__job_id
+#: model_terms:ir.ui.view,arch_db:catering.crm_lead_view_form_catering
+msgid "Event"
+msgstr "Sự kiện"
+
+#. module: catering
+#. odoo-python
+#: code:addons/catering/models/crm_lead.py:0
+msgid "Event %s created."
+msgstr "Đã tạo sự kiện %s."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "Event & Venue"
+msgstr "Sự kiện & sảnh tiệc"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__event_date
+msgid "Event Date"
+msgstr "Ngày tổ chức"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__event_type
+#: model:ir.model.fields,field_description:catering.field_job_order__event_type
+msgid "Event Type"
+msgstr "Loại tiệc"
+
+#. module: catering
+#: model:ir.ui.menu,name:catering.menu_catering_events
+msgid "Events"
+msgstr "Sự kiện"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__survey_field_kitchen
+msgid "Field Kitchen Allowed"
+msgstr "Được dựng bếp dã chiến"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__food_cost_ratio
+msgid "Food Cost (%)"
+msgstr "Giá vốn thực phẩm (%)"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__food_ratio_warning
+msgid "Food Ratio Warning"
+msgstr "Cảnh báo tỷ lệ thực phẩm"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "Food cost is"
+msgstr "Giá vốn thực phẩm là"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__survey_freight_lift
+msgid "Freight Lift"
+msgstr "Thang hàng"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "Guests"
+msgstr "Khách"
+
+#. module: catering
+#: model:ir.model.fields,help:catering.field_job_order__pax_actual
+msgid "Guests actually served, confirmed in the acceptance record."
+msgstr "Số khách thực tế phục vụ, theo biên bản nghiệm thu."
+
+#. module: catering
+#: model:ir.model,name:catering.model_job_order
+msgid "Job Order"
+msgstr "Sự việc"
+
+#. module: catering
+#: model:ir.ui.menu,name:catering.menu_catering_kitchen
+msgid "Kitchen"
+msgstr "Bếp"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__lab
+msgid "LAB - Shift labour"
+msgstr "LAB - Nhân công ca"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__labour_cost_ratio
+msgid "Labour Cost (%)"
+msgstr "Chi phí nhân công (%)"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__labour_ratio_warning
+msgid "Labour Ratio Warning"
+msgstr "Cảnh báo tỷ lệ nhân công"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "Labour cost is"
+msgstr "Chi phí nhân công là"
+
+#. module: catering
+#: model:ir.model,name:catering.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_form_view_catering
+msgid "MEAT"
+msgstr "MEAT"
+
+#. module: catering
+#: model:ir.actions.act_window,name:catering.action_catering_menus
+#: model:ir.ui.menu,name:catering.menu_catering_recipes
+msgid "Menus & Recipes"
+msgstr "Thực đơn & công thức"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_form_view_catering
+msgid "New Code"
+msgstr "Tạo mã"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__other
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__other
+msgid "Other"
+msgstr "Khác"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__over_budget
+msgid "Over Budget"
+msgstr "Vượt ngân sách"
+
+#. module: catering
+#: model:uom.uom,name:catering.uom_pax
+msgid "Pax"
+msgstr "Khách"
+
+#. module: catering
+#: model:ir.ui.menu,name:catering.menu_catering_pipeline
+msgid "Pipeline"
+msgstr "Cơ hội"
+
+#. module: catering
+#: model:uom.uom,name:catering.uom_portion
+msgid "Portion"
+msgstr "Suất"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__survey_power
+msgid "Power Available"
+msgstr "Tải điện"
+
+#. module: catering
+#: model:ir.model,name:catering.model_product_template
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: catering
+#: model:ir.model,name:catering.model_product_product
+msgid "Product Variant"
+msgstr "Biến thể sản phẩm"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__price_per_pax
+msgid "Quoted per Pax"
+msgstr "Giá báo/khách"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__raw
+msgid "RAW - Raw material"
+msgstr "RAW - Nguyên vật liệu thô"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_search_view_catering
+msgid "Raw Materials"
+msgstr "Nguyên vật liệu"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__semi
+msgid "SEMI - Kitchen semi-finished"
+msgstr "SEMI - Bán thành phẩm bếp"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__serv
+msgid "SERV - Outsourced service"
+msgstr "SERV - Dịch vụ thuê ngoài"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__product_template__catering_type__set
+msgid "SET - Set menu / package"
+msgstr "SET - Gói thực đơn"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_product_product__sku_group
+#: model:ir.model.fields,field_description:catering.field_product_template__sku_group
+msgid "SKU Group"
+msgstr "Nhóm mã"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_form_view_catering
+msgid "SKU Parts"
+msgstr "Thành phần mã"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_product_product__sku_spec
+#: model:ir.model.fields,field_description:catering.field_product_template__sku_spec
+msgid "SKU Spec"
+msgstr "Quy cách mã"
+
+#. module: catering
+#. odoo-python
+#: code:addons/catering/models/product.py:0
+msgid "SKU group and spec must be 2 to 12 capital letters or digits (got \"%s\")."
+msgstr ""
+"Nhóm và quy cách mã phải gồm 2 đến 12 chữ in hoa hoặc số (nhận được \"%s\")."
+
+#. module: catering
+#: model:ir.model.fields,help:catering.field_product_product__sku_group
+#: model:ir.model.fields,help:catering.field_product_template__sku_group
+msgid "Second part of the code, e.g. MEAT, SAUCE, MAIN, BUFFET."
+msgstr "Phần thứ hai của mã, vd: MEAT, SAUCE, MAIN, BUFFET."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.product_template_search_view_catering
+msgid "Set Menus"
+msgstr "Set menu"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__set_menu
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__set_menu
+msgid "Set menu"
+msgstr "Set menu"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__survey_notes
+msgid "Survey Notes"
+msgstr "Ghi chú khảo sát"
+
+#. module: catering
+#: model:uom.uom,name:catering.uom_table10
+msgid "Table (10 guests)"
+msgstr "Bàn (10 khách)"
+
+#. module: catering
+#: model:ir.model.fields.selection,name:catering.selection__crm_lead__event_type__tea_break
+#: model:ir.model.fields.selection,name:catering.selection__job_order__event_type__tea_break
+msgid "Tea break"
+msgstr "Tea break"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "The price per guest is above the customer's budget per guest."
+msgstr "Giá mỗi khách đang cao hơn ngân sách/khách của khách hàng."
+
+#. module: catering
+#: model:ir.model.fields,help:catering.field_product_product__sku_spec
+#: model:ir.model.fields,help:catering.field_product_template__sku_spec
+msgid "Third part of the code, e.g. BEEF, PEP, CHAF."
+msgstr "Phần thứ ba của mã, vd: BEEF, PEP, CHAF."
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__vegetarian_pax
+msgid "Vegetarian Pax"
+msgstr "Số khách ăn chay"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_crm_lead__venue
+#: model:ir.model.fields,field_description:catering.field_job_order__venue
+msgid "Venue"
+msgstr "Sảnh tiệc"
+
+#. module: catering
+#: model:ir.model.fields,field_description:catering.field_job_order__venue_address
+msgid "Venue Address"
+msgstr "Địa chỉ sảnh"
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "Venue Survey"
+msgstr "Khảo sát hiện trường"
+
+#. module: catering
+#: model_terms:ir.actions.act_window,help:catering.action_catering_events
+msgid ""
+"Won opportunities create events automatically. Each event has its own quotation, cost sheet,\n"
+"                purchases, deposit, invoice and P&amp;L."
+msgstr ""
+"Cơ hội thành công sẽ tự tạo sự kiện. Mỗi sự kiện có báo giá, dự toán,\n"
+"                đơn mua, tiền cọc, hóa đơn và lãi lỗ riêng."
+
+#. module: catering
+#: model_terms:ir.ui.view,arch_db:catering.job_order_view_form_catering
+msgid "e.g. 3 guests with shellfish allergy, no pork at table 4"
+msgstr "vd: 3 khách dị ứng hải sản, bàn 4 không ăn thịt heo"
+
+#. module: catering
+#: model:ir.model.fields,help:catering.field_job_order__survey_power
+msgid "e.g. 3-phase 30 kW near the kitchen area"
+msgstr "vd: điện 3 pha 30 kW gần khu bếp"

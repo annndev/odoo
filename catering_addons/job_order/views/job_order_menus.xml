@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_job_root" name="Jobs" sequence="15" web_icon="job_order,static/description/icon.png"/>
+    <menuitem id="menu_job_order" name="Jobs" parent="menu_job_root" action="action_job_order" sequence="10"/>
+    <menuitem id="menu_job_config" name="Configuration" parent="menu_job_root" sequence="90"
+              groups="sales_team.group_sale_manager"/>
+</odoo>

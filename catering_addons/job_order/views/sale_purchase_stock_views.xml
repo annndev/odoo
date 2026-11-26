@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_job" model="ir.ui.view">
+        <field name="name">sale.order.form.job</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="job_id" readonly="state in ('sale', 'cancel')"/>
+            </field>
+        </field>
+    </record>
+    <record id="purchase_order_form_job" model="ir.ui.view">
+        <field name="name">purchase.order.form.job</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="job_id"/>
+            </field>
+        </field>
+    </record>
+    <record id="view_picking_form_job" model="ir.ui.view">
+        <field name="name">stock.picking.form.job</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="job_id"/>
+            </field>
+        </field>
+    </record>
+    <record id="view_account_payment_form_job" model="ir.ui.view">
+        <field name="name">account.payment.form.job</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="job_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>

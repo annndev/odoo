@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_job_order" model="ir.sequence">
+            <field name="name">Job Order</field>
+            <field name="code">job.order</field>
+            <field name="prefix">JOB/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="analytic_plan_jobs" model="account.analytic.plan">
+            <field name="name">Jobs</field>
+            <field name="default_applicability">optional</field>
+        </record>
+    </data>
+</odoo>

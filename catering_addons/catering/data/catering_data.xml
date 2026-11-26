@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_category_catering" model="product.category">
+            <field name="name">Catering</field>
+        </record>
+        <record id="product_category_raw" model="product.category">
+            <field name="name">RAW - Raw materials</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_semi" model="product.category">
+            <field name="name">SEMI - Kitchen semi-finished</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_dish" model="product.category">
+            <field name="name">DISH - Finished dishes</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_set" model="product.category">
+            <field name="name">SET - Set menus</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_eq" model="product.category">
+            <field name="name">EQ - Equipment &amp; tableware</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_lab" model="product.category">
+            <field name="name">LAB - Shift labour</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+        <record id="product_category_serv" model="product.category">
+            <field name="name">SERV - Outsourced services</field>
+            <field name="parent_id" ref="product_category_catering"/>
+        </record>
+
+        <record id="uom_pax" model="uom.uom">
+            <field name="name">Pax</field>
+            <field name="category_id" ref="uom.product_uom_categ_unit"/>
+            <field name="uom_type">bigger</field>
+            <field name="factor_inv">1</field>
+            <field name="rounding">1</field>
+        </record>
+        <record id="uom_table10" model="uom.uom">
+            <field name="name">Table (10 guests)</field>
+            <field name="category_id" ref="uom.product_uom_categ_unit"/>
+            <field name="uom_type">bigger</field>
+            <field name="factor_inv">10</field>
+            <field name="rounding">1</field>
+        </record>
+        <record id="uom_portion" model="uom.uom">
+            <field name="name">Portion</field>
+            <field name="category_id" ref="uom.product_uom_categ_unit"/>
+            <field name="uom_type">bigger</field>
+            <field name="factor_inv">1</field>
+            <field name="rounding">1</field>
+        </record>
+    </data>
+</odoo>

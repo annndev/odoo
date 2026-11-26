@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_vendor_seafood" model="res.partner">
+        <field name="name">Saigon Seafood Supply</field>
+        <field name="is_company" eval="True"/>
+    </record>
+    <record id="demo_vendor_produce" model="res.partner">
+        <field name="name">Da Lat Fresh Produce</field>
+        <field name="is_company" eval="True"/>
+    </record>
+    <record id="demo_customer" model="res.partner">
+        <field name="name">Lotus Tower Corporation</field>
+        <field name="is_company" eval="True"/>
+    </record>
+
+    <record id="demo_raw_seabass" model="product.template">
+        <field name="name">Whole sea bass, fresh</field>
+        <field name="catering_type">raw</field>
+        <field name="sku_group">FISH</field>
+        <field name="sku_spec">SEABASS</field>
+        <field name="categ_id" ref="product_category_raw"/>
+        <field name="type">consu</field>
+        <field name="is_storable" eval="True"/>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="uom_po_id" ref="uom.product_uom_kgm"/>
+        <field name="standard_price">180000</field>
+        <field name="yield_factor">0.6</field>
+        <field name="sale_ok" eval="False"/>
+        <field name="seller_ids" eval="[(0, 0, {'partner_id': ref('demo_vendor_seafood'), 'price': 180000})]"/>
+    </record>
+    <record id="demo_raw_passionfruit" model="product.template">
+        <field name="name">Passion fruit</field>
+        <field name="catering_type">raw</field>
+        <field name="sku_group">FRUIT</field>
+        <field name="sku_spec">PASSION</field>
+        <field name="categ_id" ref="product_category_raw"/>
+        <field name="type">consu</field>
+        <field name="is_storable" eval="True"/>
+        <field name="uom_id" ref="uom.product_uom_kgm"/>
+        <field name="uom_po_id" ref="uom.product_uom_kgm"/>
+        <field name="standard_price">40000</field>
+        <field name="yield_factor">0.5</field>
+        <field name="sale_ok" eval="False"/>
+        <field name="seller_ids" eval="[(0, 0, {'partner_id': ref('demo_vendor_produce'), 'price': 40000})]"/>
+    </record>
+    <record id="demo_dish_seabass" model="product.template">
+        <field name="name">Pan-seared sea bass, passion fruit sauce</field>
+        <field name="catering_type">dish</field>
+        <field name="sku_group">MAIN</field>
+        <field name="sku_spec">FISH</field>
+        <field name="categ_id" ref="product_category_dish"/>
+        <field name="type">consu</field>
+        <field name="uom_id" ref="uom_portion"/>
+        <field name="uom_po_id" ref="uom_portion"/>
+        <field name="purchase_ok" eval="False"/>
+    </record>
+    <record id="demo_set_buffet" model="product.template">
+        <field name="name">Buffet VIP 500k</field>
+        <field name="catering_type">set</field>
+        <field name="sku_group">BUFFET</field>
+        <field name="sku_spec">VIP</field>
+        <field name="categ_id" ref="product_category_set"/>
+        <field name="type">consu</field>
+        <field name="uom_id" ref="uom_pax"/>
+        <field name="uom_po_id" ref="uom_pax"/>
+        <field name="list_price">500000</field>
+        <field name="purchase_ok" eval="False"/>
+        <field name="invoice_policy">order</field>
+    </record>
+
+    <record id="demo_bom_dish_seabass" model="mrp.bom">
+        <field name="product_tmpl_id" ref="demo_dish_seabass"/>
+        <field name="product_uom_id" ref="uom_portion"/>
+        <field name="product_qty">1</field>
+        <field name="type">phantom</field>
+    </record>
+    <record id="demo_bom_line_seabass_fish" model="mrp.bom.line">
+        <field name="bom_id" ref="demo_bom_dish_seabass"/>
+        <field name="product_id" model="product.product" eval="obj().env.ref('catering.demo_raw_seabass').product_variant_id.id"/>
+        <field name="product_qty">150</field>
+        <field name="product_uom_id" ref="uom.product_uom_gram"/>
+    </record>
+    <record id="demo_bom_line_seabass_fruit" model="mrp.bom.line">
+        <field name="bom_id" ref="demo_bom_dish_seabass"/>
+        <field name="product_id" model="product.product" eval="obj().env.ref('catering.demo_raw_passionfruit').product_variant_id.id"/>
+        <field name="product_qty">30</field>
+        <field name="product_uom_id" ref="uom.product_uom_gram"/>
+    </record>
+    <record id="demo_bom_set_buffet" model="mrp.bom">
+        <field name="product_tmpl_id" ref="demo_set_buffet"/>
+        <field name="product_uom_id" ref="uom_pax"/>
+        <field name="product_qty">1</field>
+        <field name="type">phantom</field>
+    </record>
+    <record id="demo_bom_line_buffet_seabass" model="mrp.bom.line">
+        <field name="bom_id" ref="demo_bom_set_buffet"/>
+        <field name="product_id" model="product.product" eval="obj().env.ref('catering.demo_dish_seabass').product_variant_id.id"/>
+        <field name="product_qty">1</field>
+        <field name="product_uom_id" ref="uom_portion"/>
+    </record>
+
+    <record id="demo_lead_gala" model="crm.lead">
+        <field name="name">Year-end gala, 100 guests</field>
+        <field name="type">opportunity</field>
+        <field name="partner_id" ref="demo_customer"/>
+        <field name="event_type">buffet</field>
+        <field name="pax_estimated">100</field>
+        <field name="budget_per_pax">550000</field>
+        <field name="venue">Lotus Tower, ballroom level 20</field>
+        <field name="allergy_notes">2 guests allergic to shellfish.</field>
+    </record>
+</odoo>

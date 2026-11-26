@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_catering_root" name="Catering" sequence="14"
+              web_icon="catering,static/description/icon.png"/>
+    <menuitem id="menu_catering_events" name="Events" parent="menu_catering_root"
+              action="action_catering_events" sequence="10"/>
+    <menuitem id="menu_catering_pipeline" name="Pipeline" parent="menu_catering_root"
+              action="crm.crm_lead_action_pipeline" sequence="5"/>
+    <menuitem id="menu_catering_kitchen" name="Kitchen" parent="menu_catering_root" sequence="20"/>
+    <menuitem id="menu_catering_recipes" name="Menus &amp; Recipes" parent="menu_catering_kitchen"
+              action="action_catering_menus" sequence="10"/>
+    <menuitem id="menu_catering_items" name="Catering Items" parent="menu_catering_kitchen"
+              action="action_catering_products" sequence="20"/>
+    <!-- the generic Jobs app is replaced by the Catering app in this skin -->
+    <record id="job_order.menu_job_root" model="ir.ui.menu">
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="job_cost_entry_wizard_view_form" model="ir.ui.view">
+        <field name="name">job.cost.entry.wizard.form</field>
+        <field name="model">job.cost.entry.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Record Job Cost">
+                <group>
+                    <group>
+                        <field name="job_id" readonly="1"/>
+                        <field name="cost_group"/>
+                        <field name="name" placeholder="e.g. 12 waiter shifts, broken wine glasses"/>
+                        <field name="amount"/>
+                    </group>
+                    <group>
+                        <field name="date"/>
+                        <field name="credit_account_id"/>
+                        <field name="partner_id"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="currency_id" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_confirm" type="object" string="Post" class="btn-primary"/>
+                    <button special="cancel" string="Discard"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

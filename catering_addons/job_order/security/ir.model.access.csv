@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_job_order_user,job.order user,model_job_order,base.group_user,1,1,1,0
+access_job_order_manager,job.order manager,model_job_order,sales_team.group_sale_manager,1,1,1,1
+access_job_cost_line_user,job.cost.line user,model_job_cost_line,base.group_user,1,1,1,1
+access_job_cost_entry_wizard,job.cost.entry.wizard,model_job_cost_entry_wizard,account.group_account_invoice,1,1,1,1
+access_job_deposit_wizard,job.deposit.wizard,model_job_deposit_wizard,account.group_account_invoice,1,1,1,1

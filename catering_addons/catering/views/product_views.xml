@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_catering" model="ir.ui.view">
+        <field name="name">product.template.form.catering</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_general']" position="before">
+                <group name="catering" string="Catering">
+                    <field name="catering_type"/>
+                    <label for="sku_group" string="SKU Parts" invisible="not catering_type"/>
+                    <div class="o_row" invisible="not catering_type">
+                        <field name="sku_group" placeholder="MEAT"/>
+                        <field name="sku_spec" placeholder="BEEF"/>
+                        <button name="action_catering_generate_code" type="object" string="New Code"
+                                class="btn-link" invisible="not sku_group or not id"/>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_search_view_catering" model="ir.ui.view">
+        <field name="name">product.template.search.catering</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='filter_to_sell']" position="before">
+                <filter name="catering_raw" string="Raw Materials" domain="[('catering_type', '=', 'raw')]"/>
+                <filter name="catering_dish" string="Dishes" domain="[('catering_type', '=', 'dish')]"/>
+                <filter name="catering_set" string="Set Menus" domain="[('catering_type', '=', 'set')]"/>
+                <filter name="catering_eq" string="Equipment" domain="[('catering_type', '=', 'eq')]"/>
+                <separator/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter name="group_catering_type" string="Catering Type" context="{'group_by': 'catering_type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_catering_products" model="ir.actions.act_window">
+        <field name="name">Catering Items</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('catering_type', '!=', False)]</field>
+        <field name="context">{'search_default_group_catering_type': 1, 'default_catering_type': 'raw'}</field>
+    </record>
+
+    <record id="action_catering_menus" model="ir.actions.act_window">
+        <field name="name">Menus &amp; Recipes</field>
+        <field name="res_model">mrp.bom</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('type', '=', 'phantom')]</field>
+        <field name="context">{'default_type': 'phantom'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a recipe</p>
+            <p>A dish recipe lists its ingredients as net quantity per portion (for example 150 g of fish fillet).
+                A set menu lists its dishes per guest. Yields on raw materials turn net into purchase quantities.</p>
+        </field>
+    </record>
+</odoo>

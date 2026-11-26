@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="job_order_view_form" model="ir.ui.view">
+        <field name="name">job.order.form</field>
+        <field name="model">job.order</field>
+        <field name="arch" type="xml">
+            <form string="Job">
+                <header>
+                    <button name="action_create_quotation" type="object" string="New Quotation"
+                            class="btn-primary" invisible="state not in ('draft', 'quoted') or sale_order_count"/>
+                    <button name="action_compute_cost_sheet" type="object" string="Compute Cost Sheet"
+                            invisible="not sale_order_id or state in ('closed', 'cancel')"/>
+                    <button name="action_open_deposit_wizard" type="object" string="Register Deposit"
+                            invisible="state not in ('quoted', 'confirmed')" groups="account.group_account_invoice"/>
+                    <button name="action_generate_purchases" type="object" string="Create Purchase RFQs"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_issue_materials" type="object" string="Issue to Job"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_open_cost_entry_wizard" type="object" string="Record Cost"
+                            invisible="state not in ('confirmed', 'accepted')" groups="account.group_account_invoice"/>
+                    <button name="action_accept" type="object" string="Accept" class="btn-primary"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_close" type="object" string="Close Out" class="btn-primary"
+                            invisible="state != 'accepted'" groups="account.group_account_invoice"
+                            confirm="Post the closeout entry (WIP to cost of goods sold) and lock this job?"/>
+                    <button name="action_reopen" type="object" string="Reopen"
+                            invisible="state != 'closed'" groups="account.group_account_manager"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state in ('closed', 'cancel')"/>
+                    <button name="action_draft" type="object" string="Reset to New" invisible="state != 'cancel'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,quoted,confirmed,accepted,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_sale_orders" type="object" class="oe_stat_button" icon="fa-dollar"
+                                invisible="not sale_order_count">
+                            <field name="sale_order_count" widget="statinfo" string="Quotations"/>
+                        </button>
+                        <button name="action_view_payments" type="object" class="oe_stat_button" icon="fa-money"
+                                invisible="not payment_count">
+                            <field name="payment_count" widget="statinfo" string="Deposits"/>
+                        </button>
+                        <button name="action_view_purchases" type="object" class="oe_stat_button" icon="fa-shopping-cart"
+                                invisible="not purchase_count">
+                            <field name="purchase_count" widget="statinfo" string="Purchases"/>
+                        </button>
+                        <button name="action_view_pickings" type="object" class="oe_stat_button" icon="fa-truck"
+                                invisible="not picking_count">
+                            <field name="picking_count" widget="statinfo" string="Transfers"/>
+                        </button>
+                        <button name="action_view_invoices" type="object" class="oe_stat_button" icon="fa-pencil-square-o"
+                                invisible="not invoice_count">
+                            <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                        </button>
+                        <button name="action_view_move_lines" type="object" class="oe_stat_button" icon="fa-book"
+                                invisible="not move_line_count" groups="account.group_account_readonly">
+                            <field name="move_line_count" widget="statinfo" string="Journal Items"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Closed" bg_color="text-bg-success" invisible="state != 'closed'"/>
+                    <div class="oe_title">
+                        <h3><field name="code" readonly="1"/></h3>
+                        <h1><field name="name" placeholder="e.g. Year-end gala, 500 guests"/></h1>
+                    </div>
+                    <group>
+                        <group name="main">
+                            <field name="partner_id"/>
+                            <field name="user_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group name="dates">
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                            <field name="sale_order_id" readonly="1"/>
+                            <field name="analytic_account_id" groups="analytic.group_analytic_accounting"/>
+                        </group>
+                    </group>
+                    <div class="alert alert-warning" role="alert" invisible="not below_floor">
+                        The quoted amount is below the floor price (planned cost plus contingency).
+                    </div>
+                    <notebook>
+                        <page string="Cost Sheet" name="cost_sheet">
+                            <field name="cost_line_ids" readonly="state in ('closed', 'cancel')">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="is_auto" column_invisible="True"/>
+                                    <field name="cost_group" readonly="is_auto"/>
+                                    <field name="product_id" readonly="is_auto"/>
+                                    <field name="name"/>
+                                    <field name="net_qty" readonly="is_auto"/>
+                                    <field name="yield_factor" readonly="is_auto" optional="show"/>
+                                    <field name="gross_qty"/>
+                                    <field name="uom_id" groups="uom.group_uom"/>
+                                    <field name="unit_cost"/>
+                                    <field name="planned_amount" sum="Total"/>
+                                    <field name="ordered_qty" optional="show"/>
+                                    <field name="issued_qty" optional="show"/>
+                                    <field name="currency_id" column_invisible="True"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group string="Pricing">
+                                    <field name="contingency_pct"/>
+                                    <field name="markup_pct"/>
+                                    <field name="planned_cost"/>
+                                    <field name="floor_price"/>
+                                    <field name="suggested_price"/>
+                                    <field name="quoted_amount"/>
+                                    <field name="planned_margin"/>
+                                    <field name="below_floor" invisible="1"/>
+                                </group>
+                                <group string="Deposit">
+                                    <field name="deposit_pct"/>
+                                    <field name="deposit_amount"/>
+                                    <field name="deposit_received"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="P&amp;L" name="pnl">
+                            <group>
+                                <group string="Planned">
+                                    <field name="quoted_amount" string="Revenue"/>
+                                    <field name="planned_material"/>
+                                    <field name="planned_labour"/>
+                                    <field name="planned_equipment"/>
+                                    <field name="planned_subcontract"/>
+                                    <field name="planned_cost"/>
+                                    <field name="planned_margin"/>
+                                </group>
+                                <group string="Actual">
+                                    <field name="actual_revenue"/>
+                                    <field name="actual_material"/>
+                                    <field name="actual_labour"/>
+                                    <field name="actual_equipment"/>
+                                    <field name="actual_subcontract"/>
+                                    <field name="actual_cost"/>
+                                    <field name="actual_margin"/>
+                                    <field name="actual_margin_pct"/>
+                                    <field name="wip_balance"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="job_order_view_list" model="ir.ui.view">
+        <field name="name">job.order.list</field>
+        <field name="model">job.order</field>
+        <field name="arch" type="xml">
+            <list string="Jobs">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="date_start"/>
+                <field name="user_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="currency_id" column_invisible="True"/>
+                <field name="quoted_amount" sum="Total" optional="show"/>
+                <field name="state" widget="badge"
+                       decoration-info="state in ('draft', 'quoted')" decoration-warning="state == 'confirmed'"
+                       decoration-success="state in ('accepted', 'closed')" decoration-muted="state == 'cancel'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="job_order_view_search" model="ir.ui.view">
+        <field name="name">job.order.search</field>
+        <field name="model">job.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <filter name="my" string="My Jobs" domain="[('user_id', '=', uid)]"/>
+                <separator/>
+                <filter name="open" string="Open" domain="[('state', 'not in', ('closed', 'cancel'))]"/>
+                <filter name="to_close" string="To Close" domain="[('state', '=', 'accepted')]"/>
+                <filter name="closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <separator/>
+                <filter name="date_start" string="Start Date" date="date_start"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_month" string="Month" context="{'group_by': 'date_start:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="job_order_view_calendar" model="ir.ui.view">
+        <field name="name">job.order.calendar</field>
+        <field name="model">job.order</field>
+        <field name="arch" type="xml">
+            <calendar string="Jobs" date_start="date_start" date_stop="date_end" color="state" mode="month">
+                <field name="partner_id"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="action_job_order" model="ir.actions.act_window">
+        <field name="name">Jobs</field>
+        <field name="res_model">job.order</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_open': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first job</p>
+            <p>A job owns its quotation, purchases, issues, deposits and invoices, and gives its own P&amp;L.</p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_job" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.job</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='account']" position="inside">
+                <block title="Job Orders" name="job_order_setting_container">
+                    <setting string="Job accounting" help="Accounts, journal and location used by job issues, cost entries and closeouts">
+                        <div class="content-group">
+                            <div class="row mt8"><label for="job_wip_account_id" class="col-lg-5 o_light_label"/><field name="job_wip_account_id"/></div>
+                            <div class="row"><label for="job_cogs_account_id" class="col-lg-5 o_light_label"/><field name="job_cogs_account_id"/></div>
+                            <div class="row"><label for="job_journal_id" class="col-lg-5 o_light_label"/><field name="job_journal_id"/></div>
+                            <div class="row"><label for="job_consumption_location_id" class="col-lg-5 o_light_label"/><field name="job_consumption_location_id"/></div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

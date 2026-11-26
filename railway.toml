@@ -1,0 +1,10 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# The first boot installs the modules before the web server starts, which takes a few minutes.
+healthcheckPath = "/web/health"
+healthcheckTimeout = 900
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

@@ -1,0 +1,1248 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* job_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 16:41+0000\n"
+"PO-Revision-Date: 2026-11-26 16:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "A closed job cannot be modified. Reopen it first."
+msgstr "Không thể sửa sự việc đã khóa sổ. Hãy mở lại trước."
+
+#. module: job_order
+#: model_terms:ir.actions.act_window,help:job_order.action_job_order
+msgid ""
+"A job owns its quotation, purchases, issues, deposits and invoices, and "
+"gives its own P&amp;L."
+msgstr ""
+"Mỗi sự việc có báo giá, đơn mua, phiếu xuất, tiền cọc, hóa đơn và báo cáo "
+"lãi lỗ riêng."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Accept"
+msgstr "Nghiệm thu"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__accepted
+msgid "Accepted"
+msgstr "Đã nghiệm thu"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_cost_entry_wizard__credit_account_id
+msgid ""
+"Account credited, e.g. 3341/33881 payable to shift staff, 1531 tools and "
+"supplies for breakage, 3311 a subcontractor."
+msgstr ""
+"Tài khoản ghi Có, vd: 3341/33881 phải trả nhân viên ca, 1531 công cụ dụng cụ"
+" khi bể vỡ, 3311 thầu phụ."
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_res_company__job_cogs_account_id
+#: model:ir.model.fields,help:job_order.field_res_config_settings__job_cogs_account_id
+msgid "Account debited when a job is closed out (VN: 632)."
+msgstr "Tài khoản ghi Nợ khi khóa sổ sự việc (VN: 632)."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.res_config_settings_view_form_job
+msgid ""
+"Accounts, journal and location used by job issues, cost entries and "
+"closeouts"
+msgstr ""
+"Tài khoản, sổ nhật ký và địa điểm dùng khi xuất kho, ghi chi phí và khóa sổ "
+"sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_needaction
+msgid "Action Needed"
+msgstr "Cần thực hiện"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Biểu tượng ngoại lệ hoạt động"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng loại hoạt động"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Actual"
+msgstr "Thực tế"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_cost
+msgid "Actual Cost"
+msgstr "Chi phí thực tế"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_equipment
+msgid "Actual E"
+msgstr "Thực tế E"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_labour
+msgid "Actual L"
+msgstr "Thực tế L"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_material
+msgid "Actual M"
+msgstr "Thực tế M"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_subcontract
+msgid "Actual S"
+msgstr "Thực tế S"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__amount
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__amount
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__analytic_account_id
+msgid "Analytic Account"
+msgstr "Tài khoản quản trị"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số tệp đính kèm"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__below_floor
+msgid "Below Floor"
+msgstr "Dưới giá sàn"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Cancel the confirmed order of %s first."
+msgstr "Hãy hủy đơn bán đã xác nhận của %s trước."
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__cancel
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Close Out"
+msgstr "Khóa sổ"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__closed
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Closed"
+msgstr "Đã khóa sổ"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Closeout %s"
+msgstr "Khóa sổ %s"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__close_move_id
+msgid "Closeout Entry"
+msgstr "Bút toán khóa sổ"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__company_id
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__company_id
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__company_id
+#: model:ir.model.fields,field_description:job_order.field_job_order__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Compute Cost Sheet"
+msgstr "Tính dự toán"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: job_order
+#: model:ir.ui.menu,name:job_order.menu_job_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__confirmed
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__contingency_pct
+msgid "Contingency (%)"
+msgstr "Dự phòng (%)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__cost_line_ids
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Cost Sheet"
+msgstr "Dự toán"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__markup_pct
+msgid "Cost-plus markup on the floor price for the suggested price."
+msgstr "Tỷ lệ cộng thêm trên giá sàn để ra giá đề xuất (Cost-Plus)."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__credit_account_id
+msgid "Counterpart Account"
+msgstr "Tài khoản đối ứng"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Create Purchase RFQs"
+msgstr "Tạo đề nghị mua hàng"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Create a quotation with the menu/kits first."
+msgstr "Hãy tạo báo giá có thực đơn trước."
+
+#. module: job_order
+#: model_terms:ir.actions.act_window,help:job_order.action_job_order
+msgid "Create your first job"
+msgstr "Tạo sự việc đầu tiên"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__create_uid
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__create_uid
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__create_uid
+#: model:ir.model.fields,field_description:job_order.field_job_order__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__create_date
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__create_date
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__create_date
+#: model:ir.model.fields,field_description:job_order.field_job_order__create_date
+msgid "Created on"
+msgstr "Tạo lúc"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__analytic_account_id
+msgid ""
+"Created with the job; every revenue and cost line of the job carries it."
+msgstr ""
+"Tạo cùng sự việc; mọi dòng doanh thu và chi phí của sự việc đều gắn mã này."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__currency_id
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__currency_id
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__currency_id
+#: model:ir.model.fields,field_description:job_order.field_job_order__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__partner_id
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__date
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Deposit"
+msgstr "Tiền cọc"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/wizard/job_deposit.py:0
+msgid "Deposit %s"
+msgstr "Tiền cọc %s"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__deposit_pct
+msgid "Deposit (%)"
+msgstr "Tỷ lệ cọc (%)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__deposit_received
+msgid "Deposit Received"
+msgstr "Cọc đã nhận"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__deposit_amount
+msgid "Deposit Requested"
+msgstr "Cọc cần thu"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__payment_ids
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Deposits"
+msgstr "Tiền cọc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__name
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__name
+msgid "Description"
+msgstr "Diễn giải"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_cost_entry_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:job_order.job_deposit_wizard_view_form
+msgid "Discard"
+msgstr "Hủy bỏ"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__display_name
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__display_name
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__display_name
+#: model:ir.model.fields,field_description:job_order.field_job_order__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__account_move_line__job_cost_group__equipment
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_entry_wizard__cost_group__equipment
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_line__cost_group__equipment
+#: model:ir.model.fields.selection,name:job_order.selection__product_template__job_cost_group__equipment
+msgid "E - Equipment & Rental"
+msgstr "E - Thiết bị & thuê ngoài"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__date_end
+msgid "End"
+msgstr "Kết thúc"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Every stocked material on the cost sheet has already been issued."
+msgstr "Mọi nguyên liệu tồn kho trong dự toán đã được xuất."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Everything on the cost sheet is already ordered."
+msgstr "Mọi dòng trong dự toán đã được đặt mua."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__floor_price
+msgid "Floor Price"
+msgstr "Giá sàn"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Biểu tượng Font Awesome, vd: fa-tasks"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__is_auto
+msgid "From Menu"
+msgstr "Từ thực đơn"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_cost_line__is_auto
+msgid ""
+"Generated from the order kits; rebuilt on every cost sheet computation."
+msgstr "Sinh từ thực đơn của đơn bán; tạo lại mỗi lần tính dự toán."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_margin
+msgid "Gross Margin"
+msgstr "Lợi nhuận gộp"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_margin_pct
+msgid "Gross Margin (%)"
+msgstr "Tỷ suất lợi nhuận gộp (%)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__gross_qty
+msgid "Gross Qty"
+msgstr "SL mua (Gross)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__cost_group
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__cost_group
+msgid "Group"
+msgstr "Nhóm"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__has_message
+msgid "Has Message"
+msgstr "Có tin nhắn"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__id
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__id
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__id
+#: model:ir.model.fields,field_description:job_order.field_job_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng báo hoạt động ngoại lệ."
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, tin nhắn mới cần bạn chú ý."
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__message_has_error
+#: model:ir.model.fields,help:job_order.field_job_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu chọn, một số tin nhắn bị lỗi gửi."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__invoice_count
+msgid "Invoice Count"
+msgstr "Số hóa đơn"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Invoices"
+msgstr "Hóa đơn"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_is_follower
+msgid "Is Follower"
+msgstr "Đang theo dõi"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Issue to Job"
+msgstr "Xuất kho cho sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__issued_qty
+msgid "Issued"
+msgstr "Đã xuất"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__product_id
+msgid "Item"
+msgstr "Vật tư"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_account_bank_statement_line__job_id
+#: model:ir.model.fields,field_description:job_order.field_account_move__job_id
+#: model:ir.model.fields,field_description:job_order.field_account_payment__job_id
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__job_id
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__job_id
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__job_id
+#: model:ir.model.fields,field_description:job_order.field_purchase_order__job_id
+#: model:ir.model.fields,field_description:job_order.field_sale_order__job_id
+#: model:ir.model.fields,field_description:job_order.field_stock_picking__job_id
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Job"
+msgstr "Sự việc"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Job %s is closed or cancelled."
+msgstr "Sự việc %s đã khóa sổ hoặc đã hủy."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/res_company.py:0
+msgid "Job Consumption"
+msgstr "Xuất dùng cho sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_res_company__job_consumption_location_id
+#: model:ir.model.fields,field_description:job_order.field_res_config_settings__job_consumption_location_id
+msgid "Job Consumption Location"
+msgstr "Địa điểm xuất dùng sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_account_move_line__job_cost_group
+#: model:ir.model.fields,field_description:job_order.field_product_product__job_cost_group
+#: model:ir.model.fields,field_description:job_order.field_product_template__job_cost_group
+msgid "Job Cost Group"
+msgstr "Nhóm chi phí"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_job_cost_line
+msgid "Job Cost Sheet Line"
+msgstr "Dòng dự toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_res_company__job_cogs_account_id
+#: model:ir.model.fields,field_description:job_order.field_res_config_settings__job_cogs_account_id
+msgid "Job Cost of Sales Account"
+msgstr "Tài khoản giá vốn"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_res_company__job_journal_id
+#: model:ir.model.fields,field_description:job_order.field_res_config_settings__job_journal_id
+msgid "Job Journal"
+msgstr "Sổ nhật ký sự việc"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_job_order
+msgid "Job Order"
+msgstr "Sự việc"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.res_config_settings_view_form_job
+msgid "Job Orders"
+msgstr "Sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_res_company__job_wip_account_id
+#: model:ir.model.fields,field_description:job_order.field_res_config_settings__job_wip_account_id
+msgid "Job WIP Account"
+msgstr "Tài khoản chi phí dở dang"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.res_config_settings_view_form_job
+msgid "Job accounting"
+msgstr "Hạch toán sự việc"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+#: model:account.analytic.plan,name:job_order.analytic_plan_jobs
+#: model:ir.actions.act_window,name:job_order.action_job_order
+#: model:ir.ui.menu,name:job_order.menu_job_order
+#: model:ir.ui.menu,name:job_order.menu_job_root
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_calendar
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_list
+msgid "Jobs"
+msgstr "Sự việc"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_account_move
+msgid "Journal Entry"
+msgstr "Bút toán"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_account_move_line
+msgid "Journal Item"
+msgstr "Dòng bút toán"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Journal Items"
+msgstr "Dòng bút toán"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__account_move_line__job_cost_group__labour
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_entry_wizard__cost_group__labour
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_line__cost_group__labour
+#: model:ir.model.fields.selection,name:job_order.selection__product_template__job_cost_group__labour
+msgid "L - Labour"
+msgstr "L - Nhân công"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__write_uid
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__write_uid
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__write_uid
+#: model:ir.model.fields,field_description:job_order.field_job_order__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__write_date
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__write_date
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__write_date
+#: model:ir.model.fields,field_description:job_order.field_job_order__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối lúc"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__account_move_line__job_cost_group__material
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_entry_wizard__cost_group__material
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_line__cost_group__material
+#: model:ir.model.fields.selection,name:job_order.selection__product_template__job_cost_group__material
+msgid "M - Material"
+msgstr "M - Vật tư"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__sale_order_id
+msgid "Main Order"
+msgstr "Đơn bán chính"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__markup_pct
+msgid "Markup (%)"
+msgstr "Tỷ lệ cộng thêm (%)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_deposit_wizard__memo
+msgid "Memo"
+msgstr "Nội dung"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Lỗi gửi tin nhắn"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_res_company__job_journal_id
+#: model:ir.model.fields,help:job_order.field_res_config_settings__job_journal_id
+msgid "Miscellaneous journal used for job cost entries and closeouts."
+msgstr "Sổ nhật ký tổng hợp dùng để ghi chi phí và khóa sổ sự việc."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__move_line_count
+msgid "Move Line Count"
+msgstr "Số dòng bút toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn hoạt động của tôi"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "My Jobs"
+msgstr "Sự việc của tôi"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__net_qty
+msgid "Net Qty"
+msgstr "SL tịnh (Net)"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__draft
+msgid "New"
+msgstr "Mới"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "New Quotation"
+msgstr "Tạo báo giá"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sự kiện lịch của hoạt động tiếp theo"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn hoạt động tiếp theo"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại hoạt động tiếp theo"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid ""
+"No vendor is set for: %s. Add a vendor on these products or buy them "
+"manually."
+msgstr ""
+"Chưa có nhà cung cấp cho: %s. Hãy thêm nhà cung cấp cho các sản phẩm này "
+"hoặc mua thủ công."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "No warehouse found for company %s."
+msgstr "Không tìm thấy kho của công ty %s."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__notes
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số hành động"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Số tin nhắn cần xử lý"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin nhắn lỗi gửi"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Only a confirmed job can be accepted."
+msgstr "Chỉ sự việc đã xác nhận mới được nghiệm thu."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Only a confirmed or accepted job can be closed."
+msgstr "Chỉ sự việc đã xác nhận hoặc đã nghiệm thu mới được khóa sổ."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Open"
+msgstr "Đang mở"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__wip_balance
+msgid "Open WIP"
+msgstr "Dở dang còn lại"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__ordered_qty
+msgid "Ordered"
+msgstr "Đã đặt"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "P&L"
+msgstr "Lãi/Lỗ"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_entry_wizard__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__payment_count
+msgid "Payment Count"
+msgstr "Số thanh toán"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__picking_count
+msgid "Picking Count"
+msgstr "Số phiếu kho"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__planned_amount
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Planned"
+msgstr "Dự toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_cost
+msgid "Planned Cost"
+msgstr "Chi phí dự toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_equipment
+msgid "Planned E"
+msgstr "Dự toán E"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_labour
+msgid "Planned L"
+msgstr "Dự toán L"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_material
+msgid "Planned M"
+msgstr "Dự toán M"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_margin
+msgid "Planned Margin"
+msgstr "Lợi nhuận dự toán"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__planned_subcontract
+msgid "Planned S"
+msgstr "Dự toán S"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__floor_price
+msgid "Planned cost plus contingency: the lowest acceptable price."
+msgstr "Chi phí dự toán cộng dự phòng: mức giá thấp nhất chấp nhận được."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_cost_entry_wizard_view_form
+msgid "Post"
+msgstr "Ghi sổ"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Post or cancel the draft invoices of %s before closing it."
+msgstr "Hãy ghi sổ hoặc hủy hóa đơn nháp của %s trước khi khóa sổ."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Post the closeout entry (WIP to cost of goods sold) and lock this job?"
+msgstr "Ghi bút toán kết chuyển (154 sang 632) và khóa sổ sự việc này?"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Pricing"
+msgstr "Định giá"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_product_template
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__purchase_count
+msgid "Purchase Count"
+msgstr "Số đơn mua"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__purchase_ids
+msgid "Purchase Orders"
+msgstr "Đơn mua hàng"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Purchases"
+msgstr "Mua hàng"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_cost_line__net_qty
+msgid "Quantity actually used/served (after preparation losses)."
+msgstr "Khối lượng tịnh thực dùng/phục vụ (sau hao hụt sơ chế)."
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_cost_line__gross_qty
+msgid "Quantity to buy and issue: net quantity / yield."
+msgstr "Khối lượng cần mua và xuất: khối lượng tịnh / tỷ lệ thu hồi."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__sale_order_ids
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Quotations"
+msgstr "Báo giá"
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__job_order__state__quoted
+msgid "Quoted"
+msgstr "Đã báo giá"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__quoted_amount
+msgid "Quoted (untaxed)"
+msgstr "Giá báo (chưa thuế)"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Record Cost"
+msgstr "Ghi chi phí"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+#: model_terms:ir.ui.view,arch_db:job_order.job_cost_entry_wizard_view_form
+msgid "Record Job Cost"
+msgstr "Ghi chi phí sự việc"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_job_cost_entry_wizard
+msgid "Record a cost on a job (labour, breakage, subcontract)"
+msgstr "Ghi chi phí cho sự việc (nhân công, bể vỡ, thầu phụ)"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__code
+msgid "Reference"
+msgstr "Mã"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_deposit_wizard_view_form
+msgid "Register"
+msgstr "Ghi nhận"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+#: model_terms:ir.ui.view,arch_db:job_order.job_deposit_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Register Deposit"
+msgstr "Thu tiền cọc"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_job_deposit_wizard
+msgid "Register a customer deposit on a job"
+msgstr "Ghi nhận tiền cọc của khách cho sự việc"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Reopen"
+msgstr "Mở lại"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Reopen %s"
+msgstr "Mở lại %s"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Reopen the job before cancelling it."
+msgstr "Hãy mở lại sự việc trước khi hủy."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Reset to New"
+msgstr "Đặt lại thành Mới"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_product_product__job_cost_group
+#: model:ir.model.fields,help:job_order.field_product_template__job_cost_group
+msgid "Resource group this item is counted in on job cost sheets and P&L."
+msgstr "Nhóm nguồn lực của vật tư trên dự toán và báo cáo lãi lỗ."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__user_id
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__actual_revenue
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Revenue"
+msgstr "Doanh thu"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__contingency_pct
+msgid "Risk reserve added on top of the planned cost to get the floor price."
+msgstr "Dự phòng rủi ro cộng vào chi phí dự toán để ra giá sàn."
+
+#. module: job_order
+#: model:ir.model.fields.selection,name:job_order.selection__account_move_line__job_cost_group__subcontract
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_entry_wizard__cost_group__subcontract
+#: model:ir.model.fields.selection,name:job_order.selection__job_cost_line__cost_group__subcontract
+#: model:ir.model.fields.selection,name:job_order.selection__product_template__job_cost_group__subcontract
+msgid "S - Subcontract & Transport"
+msgstr "S - Thầu phụ & vận chuyển"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__sale_order_count
+msgid "Sale Order Count"
+msgstr "Số đơn bán"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán hàng"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng đơn bán hàng"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/res_company.py:0
+msgid "Set a Job WIP account in the settings of company %s."
+msgstr "Hãy cài đặt tài khoản chi phí dở dang cho công ty %s."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/res_company.py:0
+msgid "Set a Job cost of sales account in the settings of company %s."
+msgstr "Hãy cài đặt tài khoản giá vốn cho công ty %s."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/res_company.py:0
+msgid "Set a Job journal in the settings of company %s."
+msgstr "Hãy cài đặt sổ nhật ký sự việc cho công ty %s."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__date_start
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái theo hoạt động\n"
+"Quá hạn: Đã qua hạn\n"
+"Hôm nay: Hạn là hôm nay\n"
+"Đã lên kế hoạch: Hoạt động tương lai."
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__suggested_price
+msgid "Suggested Price"
+msgstr "Giá đề xuất"
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/wizard/job_cost_entry.py:0
+msgid "The amount must be positive."
+msgstr "Số tiền phải lớn hơn 0."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/wizard/job_deposit.py:0
+msgid "The deposit amount must be positive."
+msgstr "Số tiền cọc phải lớn hơn 0."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_deposit_wizard_view_form
+msgid ""
+"The deposit is booked as an advance on the customer's receivable.\n"
+"                    No revenue is recognised until the final invoice, which it is offset against."
+msgstr ""
+"Tiền cọc được ghi nhận là khoản ứng trước trên công nợ phải thu của khách.\n"
+"                    Chưa ghi nhận doanh thu cho đến hóa đơn cuối, khi tiền cọc được cấn trừ."
+
+#. module: job_order
+#: model:ir.model.constraint,message:job_order.constraint_job_order_code_company_uniq
+msgid "The job reference must be unique per company."
+msgstr "Mã sự việc phải là duy nhất trong mỗi công ty."
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid ""
+"The quoted amount is below the floor price (planned cost plus contingency)."
+msgstr "Giá báo đang thấp hơn giá sàn (chi phí dự toán cộng dự phòng)."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/product.py:0
+msgid "The yield of %s must be greater than 0 and at most 1."
+msgstr "Tỷ lệ thu hồi của %s phải lớn hơn 0 và không quá 1."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__name
+msgid "Title"
+msgstr "Tên"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_search
+msgid "To Close"
+msgstr "Chờ khóa sổ"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_list
+msgid "Total"
+msgstr "Tổng"
+
+#. module: job_order
+#: model:ir.model,name:job_order.model_stock_picking
+msgid "Transfer"
+msgstr "Phiếu kho"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__picking_ids
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "Transfers"
+msgstr "Phiếu kho"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên bản ghi."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__uom_id
+msgid "Unit"
+msgstr "Đơn vị"
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__unit_cost
+msgid "Unit Cost"
+msgstr "Đơn giá"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_product_product__yield_factor
+#: model:ir.model.fields,help:job_order.field_product_template__yield_factor
+msgid ""
+"Usable share after preparation (0 to 1). Purchased (gross) quantity = net "
+"quantity / yield. Example: whole sea bass filleted to 60% -> 0.6."
+msgstr ""
+"Tỷ lệ thu hồi sau sơ chế (0 đến 1). Khối lượng mua (Gross) = khối lượng tịnh"
+" / tỷ lệ thu hồi. Vd: cá chẽm nguyên con phi lê còn 60% -> 0.6."
+
+#. module: job_order
+#. odoo-python
+#: code:addons/job_order/models/job_order.py:0
+msgid "Validate or cancel the open transfers of %s before closing it."
+msgstr "Hãy xác nhận hoặc hủy các phiếu kho đang mở của %s trước khi khóa sổ."
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_res_company__job_consumption_location_id
+#: model:ir.model.fields,help:job_order.field_res_config_settings__job_consumption_location_id
+msgid "Virtual location goods are issued to when consumed by a job."
+msgstr "Địa điểm ảo nhận hàng xuất dùng cho sự việc."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_order__website_message_ids
+msgid "Website Messages"
+msgstr "Tin nhắn website"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_job_order__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử trao đổi website"
+
+#. module: job_order
+#: model:ir.model.fields,help:job_order.field_res_company__job_wip_account_id
+#: model:ir.model.fields,help:job_order.field_res_config_settings__job_wip_account_id
+msgid ""
+"Work in progress account debited by issues and cost entries of a job (VN: "
+"154)."
+msgstr ""
+"Tài khoản chi phí dở dang ghi Nợ khi xuất kho và ghi chi phí sự việc (VN: "
+"154)."
+
+#. module: job_order
+#: model:ir.model.fields,field_description:job_order.field_job_cost_line__yield_factor
+#: model:ir.model.fields,field_description:job_order.field_product_product__yield_factor
+#: model:ir.model.fields,field_description:job_order.field_product_template__yield_factor
+msgid "Yield"
+msgstr "Tỷ lệ thu hồi"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_cost_entry_wizard_view_form
+msgid "e.g. 12 waiter shifts, broken wine glasses"
+msgstr "vd: 12 ca phục vụ, bể ly vang"
+
+#. module: job_order
+#: model_terms:ir.ui.view,arch_db:job_order.job_order_view_form
+msgid "e.g. Year-end gala, 500 guests"
+msgstr "vd: Tiệc tất niên, 500 khách"

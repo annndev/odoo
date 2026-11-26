@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="job_order_view_form_catering" model="ir.ui.view">
+        <field name="name">job.order.form.catering</field>
+        <field name="model">job.order</field>
+        <field name="inherit_id" ref="job_order.job_order_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='main']" position="inside">
+                <field name="event_type"/>
+                <field name="venue"/>
+                <field name="venue_address"/>
+            </xpath>
+            <xpath expr="//group[@name='dates']" position="inside">
+                <field name="pax_estimated"/>
+                <field name="pax_actual" readonly="state not in ('confirmed', 'accepted')"/>
+                <field name="budget_per_pax"/>
+                <field name="price_per_pax" invisible="not quoted_amount"/>
+            </xpath>
+            <xpath expr="//div[hasclass('alert-warning')]" position="after">
+                <div class="alert alert-warning" role="alert" invisible="not food_ratio_warning">
+                    Food cost is <field name="food_cost_ratio" class="oe_inline" digits="[16, 1]"/>% of the quoted price,
+                    outside the 28-35% target.
+                </div>
+                <div class="alert alert-warning" role="alert" invisible="not labour_ratio_warning">
+                    Labour cost is <field name="labour_cost_ratio" class="oe_inline" digits="[16, 1]"/>% of the quoted price,
+                    outside the 12-18% target.
+                </div>
+                <div class="alert alert-info" role="alert" invisible="not over_budget">
+                    The price per guest is above the customer's budget per guest.
+                </div>
+                <field name="food_ratio_warning" invisible="1"/>
+                <field name="labour_ratio_warning" invisible="1"/>
+                <field name="over_budget" invisible="1"/>
+            </xpath>
+            <xpath expr="//page[@name='notes']" position="before">
+                <page string="Event &amp; Venue" name="event">
+                    <group>
+                        <group string="Guests">
+                            <field name="vegetarian_pax"/>
+                            <field name="allergy_notes" placeholder="e.g. 3 guests with shellfish allergy, no pork at table 4"/>
+                        </group>
+                        <group string="Venue Survey">
+                            <field name="survey_power"/>
+                            <field name="survey_field_kitchen"/>
+                            <field name="survey_freight_lift"/>
+                            <field name="survey_notes"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="job_order_view_list_catering" model="ir.ui.view">
+        <field name="name">job.order.list.catering</field>
+        <field name="model">job.order</field>
+        <field name="inherit_id" ref="job_order.job_order_view_list"/>
+        <field name="arch" type="xml">
+            <field name="date_start" position="after">
+                <field name="event_type" optional="show"/>
+                <field name="pax_estimated" optional="show"/>
+                <field name="venue" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_catering_events" model="ir.actions.act_window">
+        <field name="name">Catering Events</field>
+        <field name="res_model">job.order</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_open': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first catering event</p>
+            <p>Won opportunities create events automatically. Each event has its own quotation, cost sheet,
+                purchases, deposit, invoice and P&amp;L.</p>
+        </field>
+    </record>
+</odoo>
