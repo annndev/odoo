@@ -37,7 +37,7 @@ class TestCateringFlow(AccountTestInvoicingCommon):
         cls.fish = cls.env['product.product'].create({
             'name': 'Whole sea bass',
             'catering_type': 'raw',
-            'sku_group': 'fish',
+            'sku_group': 'tfish',
             'sku_spec': 'seabass',
             'categ_id': cls.env.ref('catering.product_category_raw').id,
             'type': 'consu',
@@ -62,7 +62,7 @@ class TestCateringFlow(AccountTestInvoicingCommon):
         cls.buffet = cls.env['product.product'].create({
             'name': 'Buffet VIP',
             'catering_type': 'set',
-            'sku_group': 'BUFFET',
+            'sku_group': 'TBUFFET',
             'categ_id': cls.env.ref('catering.product_category_set').id,
             'type': 'consu',
             'uom_id': cls.uom_pax.id,
@@ -116,11 +116,11 @@ class TestCateringFlow(AccountTestInvoicingCommon):
 
     # -------------------------------------------------------------------- tests
     def test_sku_codes(self):
-        self.assertEqual(self.fish.default_code, 'RAW-FISH-SEABASS-001')
-        self.assertEqual(self.buffet.default_code, 'SET-BUFFET-001')
+        self.assertEqual(self.fish.default_code, 'RAW-TFISH-SEABASS-001')
+        self.assertEqual(self.buffet.default_code, 'SET-TBUFFET-001')
         other = self.env['product.product'].create({
-            'name': 'Sea bass fillet', 'catering_type': 'raw', 'sku_group': 'FISH', 'sku_spec': 'SEABASS'})
-        self.assertEqual(other.default_code, 'RAW-FISH-SEABASS-002')
+            'name': 'Sea bass fillet', 'catering_type': 'raw', 'sku_group': 'TFISH', 'sku_spec': 'SEABASS'})
+        self.assertEqual(other.default_code, 'RAW-TFISH-SEABASS-002')
         with self.assertRaises(ValidationError):
             self.env['product.product'].create({'name': 'Bad', 'catering_type': 'raw', 'sku_group': 'MEAT-1'})
 

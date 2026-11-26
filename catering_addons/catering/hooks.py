@@ -37,6 +37,7 @@ STOCKED_CATEGORIES = ('catering.product_category_raw', 'catering.product_categor
 def _catering_setup_language(env):
     """Vietnamese is the default language; English stays installed and selectable."""
     env['res.lang']._activate_lang('vi_VN')
+    env['res.lang']._activate_lang('en_US')
     env['ir.module.module'].search([('state', 'in', ('installed', 'to install', 'to upgrade'))]) \
         ._update_translations(['vi_VN'])
     env['ir.default'].set('res.partner', 'lang', 'vi_VN')
